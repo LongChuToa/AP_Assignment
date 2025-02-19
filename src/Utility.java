@@ -30,4 +30,16 @@ public class Utility {
 		int x = (int) Math.sqrt(num);
 		return x*x == num;
 	}
+	
+	public static int Fibonacci(int num) {
+		if (num <= 1) return 0; //Only return when n > 2
+		int a = 1, b = 1, c = 0, n = 2;
+		while (c < num) {
+			c = a + b;
+			a = b;
+			b = c;
+			n++;
+		}
+		return c == num ? n : 0;
+	}
 }
